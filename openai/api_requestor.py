@@ -35,7 +35,7 @@ from openai import error, util, version
 from openai.openai_response import OpenAIResponse
 from openai.util import ApiType
 
-OPENAI_DEFAULT_TIMEOUT = config('OPENAI_DEFAULT_TIMEOUT', default=60)
+OPENAI_DEFAULT_TIMEOUT = config('OPENAI_DEFAULT_TIMEOUT', default=60, cast=int)
 MAX_SESSION_LIFETIME_SECS = 180
 MAX_CONNECTION_RETRIES = 2
 
